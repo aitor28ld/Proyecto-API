@@ -1,6 +1,6 @@
 from bottle import Bottle,route,run,request, template, default_app, static_file
 
-@route('/index')
+@route('/')
 def index():
     return template('index.tpl')
 
