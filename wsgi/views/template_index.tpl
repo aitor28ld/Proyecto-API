@@ -17,9 +17,7 @@
 	<body class="loading">
 		<div id="wrapper">
 			<div id="bg"></div>
-			<div id="overlay">
-				<p>hola</p>			
-			</div>
+			<div id="overlay"></div>
 			<div id="main">
 
 				<!-- Header -->
