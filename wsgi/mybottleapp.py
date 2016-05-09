@@ -1,4 +1,4 @@
-from bottle import Bottle,route,run,request, template, default_app, static_file
+from bottle import Bottle, route, run, request, template, default_app, static_file
 
 @route('/')
 def index():
