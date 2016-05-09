@@ -1,8 +1,8 @@
-from bottle import Bottle,route,run,request,template, default_app, static_file
+from bottle import Bottle,route,run,request, template, default_app, static_file
 
 @route('/')
 def index():
-    return template('index.html')
+    return template('index.tpl')
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
