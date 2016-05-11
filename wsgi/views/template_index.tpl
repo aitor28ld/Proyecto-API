@@ -24,7 +24,7 @@
 					<header id="header">
 						<h1>Spotype</h1>
 						<p>Buscador de música y artistas gracias a <a href="http://www.spotify.com">Spotify</a></p>
-						<br><p><a href="search.tpl">Empezar a buscar</a></p>
+						<br><p><a href="search">Empezar a buscar</a></p>
 						<nav>
 							<ul>
 								<li><a href="http://www.github.com/aitor28ld" class="icon fa-github"><span class="label">Github</span></a></li>
