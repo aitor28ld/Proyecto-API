@@ -6,18 +6,25 @@ import json
 def index():
     return template('template_index.tpl')
 
-@route('/search')
+@route('/search',method='POST')
 def search():
-	r= requests.get("https://api.spotify.com/v1/search?q=Linkin%20Park&type=album")
-	if r.status_code == 200:
-		discos=r.json()
-		for album in discos[u"albums"][u"items"]:
-			titulos = [album["name"]]
-			albums = [album["href"]]
-			todo = [titulos, albums]
+	buscador = request.forms.get('buscador')
+	opciones = request.forms.get('opciones')
+	return template("search.tpl", buscador=buscador, opciones=opciones)
+	
+
+
+
+#def search():
+#	r= requests.get("https://api.spotify.com/v1/search?q=Linkin%20Park&type=album")
+#	if r.status_code == 200:
+#		discos=r.json()
+#		for album in discos[u"albums"][u"items"]:
+#			titulos = [album["name"]]
+#			albums = [album["href"]]
+#			todo = [titulos, albums]
 			
-		
-	return template('search.tpl', todo=todo)
+#	return template('search.tpl', todo=todo)
 
 
 @route('/static/<filepath:path>')

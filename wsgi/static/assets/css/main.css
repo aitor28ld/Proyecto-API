@@ -512,7 +512,9 @@
 		vertical-align: middle;
 		width: 90%;
 	}
-
+		#header form,input,select {
+			color: #000000;
+		}
 		#header h1 {
 			font-size: 4.35em;
 			font-weight: 900;

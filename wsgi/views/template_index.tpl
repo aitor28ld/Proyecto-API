@@ -1,30 +1,18 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Aerial by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="static/assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="loading">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
-
+% include('header.tpl')
 				<!-- Header -->
 					<header id="header">
 						<h1>Spotype</h1>
 						<p>Buscador de música y artistas gracias a <a href="http://www.spotify.com">Spotify</a></p>
-						<br><p><a href="search">Empezar a buscar</a></p>
+						<br>
+						<form action ="search" method="post">
+						<input name="buscador" type="text" />
+						<select name="opciones">
+							<option value="Artista">Artista</option>
+							<option value="Cancion">Canción</option>
+							<option value="Album">Album</option>
+							<option value="Reproduccion">Lista de Reproducción</option>
+						</select>
+						<input value="Buscar" type="submit"/>
 						<nav>
 							<ul>
 								<li><a href="http://www.github.com/aitor28ld" class="icon fa-github"><span class="label">Github</span></a></li>
@@ -32,19 +20,4 @@
 							</ul>
 						</nav>
 					</header>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; Aitor León. Diseño: <a href="http://html5up.net">HTML5 UP</a>.</span>
-					</footer>
-
-			</div>
-		</div>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
-</html>
+% include('footer.tpl')
