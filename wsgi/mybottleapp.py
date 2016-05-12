@@ -1,5 +1,5 @@
 from bottle import Bottle, route, run, request, template, default_app, static_file
-import requests
+#import requests
 
 
 @route('/')
