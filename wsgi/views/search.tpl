@@ -23,11 +23,12 @@
 				<!-- Header -->
 					<header id="header">
 						<p>Buscar</p>
-						<nav>
-							% for i in albums:
-									<ul><p> <a href="{{i[1]}}">{{i[0]}}</a></p></ul>
+						<ul>
+							% for datos in todo:
+								<li>{{datos[0]}}</li>
 							%end
-						</nav>
+						</ul>
+						
 					</header>
 
 				<!-- Footer -->
