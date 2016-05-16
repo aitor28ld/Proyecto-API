@@ -1,5 +1,5 @@
 from bottle import Bottle, route, run, request, template, default_app, static_file
-#import requests
+import requests
 
 
 @route('/')
@@ -10,7 +10,22 @@ def index():
 def search():
 	buscador = request.forms.get('buscador')
 	opciones = request.forms.get('opciones')
-	return template("search.tpl", buscador=buscador, opciones=opciones)
+	datos={"q":buscador,"type":opciones}
+	if opciones == "artist":
+		artistas = requests.get("https://api.spotify.com/v1/search", params=datos)
+		if artistas.status_code == 200:
+			artista=artistas.json()
+			artis=artista["artists"]["items"]
+			#for i in artista["artists"]["items"]:
+			#	nombre = i["name"]
+			#	url = i["external_urls"]["spotify"]
+		
+		return template('artistas.tpl', artis=artis)
+	canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
+	if canciones.status_code== 200:
+		cancion = canciones.json()
+		if opciones == "track":
+			return template("canciones.tpl", canciones=cancion, opciones=opciones)
 	
 
 

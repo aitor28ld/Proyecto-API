@@ -7,10 +7,10 @@
 						<form action ="search" method="post">
 						<input name="buscador" type="text" />
 						<select name="opciones">
-							<option value="Artista">Artista</option>
-							<option value="Cancion">Canción</option>
-							<option value="Album">Album</option>
-							<option value="Reproduccion">Lista de Reproducción</option>
+							<option value="artist">Artista</option>
+							<option value="track">Canción</option>
+							<option value="album">Album</option>
+							<option value="playlist">Lista de Reproducción</option>
 						</select>
 						<input value="Buscar" type="submit"/>
 						<nav>
