@@ -21,11 +21,11 @@ def search():
 			#	url = i["external_urls"]["spotify"]
 		
 		return template('artistas.tpl', artis=artis)
-	canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
-	if canciones.status_code== 200:
-		cancion = canciones.json()
-		if opciones == "track":
-			return template("canciones.tpl", canciones=cancion, opciones=opciones)
+	if opciones == "track":
+		canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
+		if canciones.status_code== 200:
+			cancion = canciones.json()
+		return template("canciones.tpl", canciones=cancion, opciones=opciones)
 	
 
 
