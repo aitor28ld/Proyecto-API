@@ -24,7 +24,6 @@
 						<select name="opciones">
 							<option value="artist">Artista</option>
 							<option value="track">Canción</option>
-							<option value="album">Album</option>
 							<option value="playlist">Lista de Reproducción</option>
 						</select><br>
 						<input value="Buscar" type="submit"/></p>

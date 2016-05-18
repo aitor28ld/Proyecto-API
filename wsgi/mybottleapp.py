@@ -23,9 +23,16 @@ def search():
 		return template('artistas.tpl', artis=artis)
 	if opciones == "track":
 		canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
-		if canciones.status_code== 200:
+		if canciones.status_code == 200:
 			cancion = canciones.json()
-		return template("canciones.tpl", canciones=cancion, opciones=opciones)
+		return template("canciones.tpl", canciones=cancion)
+	
+	if opciones == "album":
+		albums = request.get("https://api.spotify.com/v1/search")
+		if albums.status_code == 200:
+			album = albums.json()
+		
+		return template("albums.tpl", album=album)
 	
 
 
