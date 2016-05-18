@@ -19,14 +19,14 @@
 			<header id="header">
 				<h1><a href="https://spotype-aitor28ld.rhcloud.com">Spotype</a></h1>
 				<p>Buscador de música y artistas gracias a <a href="http://www.spotify.com">Spotify</a></p>
-				<form action ="search" method="post">
-						<input name="buscador" type="text" />
+				<p><form action ="search" method="post">
+						<input name="buscador" type="text" /><br>
 						<select name="opciones">
 							<option value="artist">Artista</option>
 							<option value="track">Canción</option>
 							<option value="album">Album</option>
 							<option value="playlist">Lista de Reproducción</option>
-						</select>
-						<input value="Buscar" type="submit"/>
+						</select><br>
+						<input value="Buscar" type="submit"/></p>
 			</header>
 
