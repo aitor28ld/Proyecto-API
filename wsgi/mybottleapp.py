@@ -4,7 +4,7 @@ import requests
 
 @route('/')
 def index():
-    return template('template_index.tpl')
+    return template('index.tpl')
 
 @route('/search',method='POST')
 def search():
