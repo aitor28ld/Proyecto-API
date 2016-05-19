@@ -6,8 +6,8 @@ from urlparse import parse_qs
 import json
 import os
 
-client_id='3e7e48a09b864858b7cede21623b5275'
-client_secret='4854538669394dfcb39e31b72af6d460'
+client_id='d4be1938c2954285b3da4eb6ed81743c'
+client_secret='f0c4c13ea86a4d98812a56a1b57c876b'
 redirect_uri = 'http://spotype-aitor28ld.rhcloud.com/callback'
 scope = []
 token_url = "https://accounts.spotify.com/api/token"
