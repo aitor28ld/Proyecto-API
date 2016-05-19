@@ -33,7 +33,7 @@ def LOGIN():
   else:
     response.set_cookie("token", '',max_age=0)
     oauth2 = OAuth2Session(client_id, redirect_uri=redirect_uri,scope=scope)
-    authorization_url, state = oauth2.authorization_url('https://accounts.spotify.com/authorize')
+    authorization_url, state = oauth2.authorization_url('https://accounts.spotify.com/authorize/')
     response.set_cookie("oauth_state", state)
     redirect(authorization_url)
 
