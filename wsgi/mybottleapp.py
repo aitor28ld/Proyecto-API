@@ -47,7 +47,7 @@ def get_token():
 
 @route('/perfil')
 def personal():
-	perfil = requests.get("https://api.spotify.com/v1/me")
+	#perfil = requests.get("https://api.spotify.com/v1/me")
 	return template('perfil.tpl', perfil=perfil)
 
 @route('/')
