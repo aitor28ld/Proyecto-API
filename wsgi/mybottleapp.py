@@ -50,11 +50,6 @@ def get_token():
 def index():
     return template('index.tpl')
 
-@route('/sesion')
-def sesion():
-	usuario = request.forms.get('user')
-	password = request.forms.get('password')
-
 @route('/search',method='POST')
 def search():
 	buscador = request.forms.get('buscador')
