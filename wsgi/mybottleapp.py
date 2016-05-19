@@ -8,7 +8,7 @@ import os
 
 client_id='3e7e48a09b864858b7cede21623b5275'
 client_secret='4854538669394dfcb39e31b72af6d460'
-redirect_uri = 'http://spotype-aitor28ld.rhcloud.com/callback'
+redirect_uri = 'http://spotype-aitor28ld.rhcloud.com/callback/'
 scope = []
 token_url = "https://accounts.spotify.com/api/token"
 
