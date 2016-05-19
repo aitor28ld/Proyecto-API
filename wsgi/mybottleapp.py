@@ -19,7 +19,7 @@ def token_valido():
     token_ok = True
     try:
       oauth2 = OAuth2Session(client_id, token=token)
-      r = oauth2.get('https://api.spotify.com/v1/me')
+      r = oauth2.get('https://www.googleapis.com/oauth2/v1/userinfo')
     except TokenExpiredError as e:
       token_ok = False
   else:
@@ -37,7 +37,7 @@ def LOGIN():
     response.set_cookie("oauth_state", state)
     redirect(authorization_url)
 
-@get('/callback')
+@get('/oauth2callback')
 def get_token():
 
   oauth2 = OAuth2Session(client_id, state=request.cookies.oauth_state,redirect_uri=redirect_uri)
