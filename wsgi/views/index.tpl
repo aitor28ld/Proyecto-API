@@ -4,12 +4,7 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h2>Iniciar sesión</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
-								<h1>Usuario</h1>
-								<h1>Contraseña</h1>
-							</article>
+						<h2><a href="/login">Logueate</a></h2>
 						</div>
 					</section>
 
