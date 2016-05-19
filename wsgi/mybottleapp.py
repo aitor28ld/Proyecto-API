@@ -11,6 +11,7 @@ def search():
 	buscador = request.forms.get('buscador')
 	opciones = request.forms.get('opciones')
 	datos={"q":buscador,"type":opciones}
+	informacion = {"q=album":buscador,"type":opciones}
 	if opciones == "artist":
 		artistas = requests.get("https://api.spotify.com/v1/search", params=datos)
 		if artistas.status_code == 200:
@@ -28,7 +29,7 @@ def search():
 		return template("canciones.tpl", canciones=cancion)
 	
 	if opciones == "album":
-		albums = request.get("https://api.spotify.com/v1/search")
+		albums = requests.get("https://api.spotify.com/v1/search", params=datos)
 		if albums.status_code == 200:
 			album = albums.json()
 		
