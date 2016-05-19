@@ -45,6 +45,9 @@ def get_token():
   response.set_cookie("token", token,secret='some-secret-key')
   redirect("/listapersonal")
 
+@route('/listapersonal')
+def personal():
+	return template('index.tpl')
 
 @route('/')
 def index():
