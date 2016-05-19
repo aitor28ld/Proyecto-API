@@ -4,7 +4,9 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h1>Bienvenido {{perfil["display_name"]}}</h1>
+						%for i in perfil:
+							<h1>Bienvenido {{i}}</h1>
+						%end
 					</section>
 
 			</div>
