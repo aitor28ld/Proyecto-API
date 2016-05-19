@@ -1,10 +1,8 @@
 	<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					<li><a href="http://wordpress-aitor28ld.rhcloud.com" class="icon fa-wordpress"><span class="label">Wordpress</span></a></li>
+					<li><a href="https://github.com/aitor28ld" class="icon fa-github"><span class="label">Github</span></a></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; Aitor León</li><li>Diseño: <a href="http://html5up.net">HTML5 UP</a></li>
