@@ -45,7 +45,7 @@ def get_token():
   response.set_cookie("token", token,secret='some-secret-key')
   redirect("/perfil")
 
-@route('/perfil')
+@get('/perfil')
 def personal():
 	perfil = requests.get("https://api.spotify.com/v1/me")
 	return template('perfil.tpl', perfil=perfil)
