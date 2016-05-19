@@ -29,7 +29,7 @@ def token_valido():
 @get('/login')
 def LOGIN():
   if token_valido():
-    redirect("/listapersonal")
+    redirect("/perfil")
   else:
     response.set_cookie("token", '',max_age=0)
     oauth2 = OAuth2Session(client_id, redirect_uri=redirect_uri,scope=scope)
@@ -43,11 +43,11 @@ def get_token():
   oauth2 = OAuth2Session(client_id, state=request.cookies.oauth_state,redirect_uri=redirect_uri)
   token = oauth2.fetch_token(token_url, client_secret=client_secret,authorization_response=request.url)
   response.set_cookie("token", token,secret='some-secret-key')
-  redirect("/listapersonal")
+  redirect("/perfil")
 
-@route('/listapersonal')
+@route('/perfil')
 def personal():
-	return template('index.tpl')
+	return template('perfil.tpl')
 
 @route('/')
 def index():
