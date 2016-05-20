@@ -47,10 +47,11 @@ def get_token():
 
 @get('/perfil')
 def personal():
+	headers = {"authorization":token}
 	if token_valido():
 		token=request.get_cookie("token", secret=client_secret)
 		oauth2 = OAuth2Session(client_id, token=token)
-		perfil = requests.get("https://api.spotify.com/v1/me")
+		perfil = requests.get("https://api.spotify.com/v1/me" headers=headers)
 		
 		return template('perfil.tpl', perfil=perfil)
 
