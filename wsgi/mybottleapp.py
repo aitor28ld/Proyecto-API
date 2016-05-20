@@ -88,13 +88,12 @@ def search():
 		
 		return template("albums.tpl", album=album)
 		
-	#if opciones == "playlist":
-	#	token = request.get_cookie("token", secret='some-secret-key')
-	#	tokens = token["token_type"]+" "+token["access_token"]
-	#	headers = {"Accept":"aplication/json","Authorization":tokens}
+	if opciones == "playlist":
+		lista = requests.get("https://api.spotify.com/v1/search", params=datos)
+		if lista.status_code == 200:
+			playlist = lista.json()
 		
-		
-	#	return template('playlist.tpl', lista=)
+		return template('playlist.tpl', playlist=playlist)
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
