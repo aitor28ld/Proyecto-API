@@ -47,7 +47,7 @@ def get_token():
 
 @get('/perfil')
 def personal():
-	token = BQBn9IeVNZ_rgEIJ_pWPQh-713KcCUk_tggkwA_bpVBorJyQLoLe3XvU1c602cJUGBrVD41IiNRO5P1aBw01WfhlGUTGCnxFPYV4LBkUuXnP4_4B39Bx5mS0Wshe2p_rMASxvq9A3uYYm1fSV6zbNkXKkO0AaMS6OB3ayYCctQHizIJgQ4fkhiJ0gDbCXAfDMOZ9OPZISTb3jD2dVvct4VPLC1Fl
+	token=request.get_cookie("token", secret='some-secret-key')
 	headers = {"Accept":"aplication/json","Authorization":token}
 	if token_valido():
 		token=request.get_cookie("token", secret=client_secret)
