@@ -5,11 +5,10 @@
 				<!-- Two -->
 					<section id="two">
 						<h1>Bienvenido {{perfil["id"]}}</h1><br>
-						% if perfil["images"]=="":
-							<h2> Sin foto en el perfil</h2>
 						% if perfil["images"]!="":
 							<img src="{{perfil["images"][0]["url"]}}" height="230" width="290" /><br>
-						%end
+						% else:
+							<h2> Sin foto en el perfil</h2>
 						%end
 						<p> {{perfil}}</p>
 						<a href="{{perfil["external_urls"]["spotify"]}}">Más información sobre tu perfil</a>
