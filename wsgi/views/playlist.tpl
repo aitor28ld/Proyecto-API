@@ -5,8 +5,8 @@
 				<!-- Two -->
 					<section id="two">
 					%for i in playlist["playlists"]["items"]:
-						Propietario {{i["owner"]["id"]}}<br>
-						<a href="{{i["external_urls"]["spotify"]}}">{{i["name"]}}</a> 
+						<p>Propietario {{i["owner"]["id"]}}</p>
+						<a href="{{i["external_urls"]["spotify"]}}">{{i["name"]}}</a><br>
 					%end
 					</section>
 
