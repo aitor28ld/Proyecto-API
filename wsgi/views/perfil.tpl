@@ -4,10 +4,8 @@
 
 				<!-- Two -->
 					<section id="two">
-						%for i in perfil:
-							<h1>Bienvenido {{i["display_name"]}}</h1>
-							<a href="{{i["external_urls"]["spotify"]}}">Más información sobre tu perfil</a>
-						%end
+						<h1>Bienvenido {{perfil["display_name"]}}</h1>
+						<a href="{{perfil["external_urls"]["spotify"]}}">Más información sobre tu perfil</a>
 					</section>
 
 			</div>
