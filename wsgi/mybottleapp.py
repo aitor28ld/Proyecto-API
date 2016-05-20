@@ -48,7 +48,7 @@ def get_token():
 @get('/perfil')
 def personal():
 	token=requests.get_cookie("token", secret='some-secret-key')
-	headers = {"Accept":"aplication/json","Authorization":token}
+	headers = {"Accept":"aplication/json","Authorization":"Bearer "+token.text}
 	if token_valido():
 		token=request.get_cookie("token", secret=client_secret)
 		oauth2 = OAuth2Session(client_id, token=token)
