@@ -49,11 +49,10 @@ def get_token():
 def personal():
 	token = request.get_cookie("token", secret='some-secret-key')
 	tokens = token["token_type"]+" "+token["access_token"]
-	return tokens
-	#headers = {"Accept":"aplication/json","Authorization":tokens}
-	#perfil = requests.get("https://api.spotify.com/v1/me", headers=headers)
+	headers = {"Accept":"aplication/json","Authorization":tokens}
+	perfil = requests.get("https://api.spotify.com/v1/me", headers=headers)
 		
-	#return template('perfil.tpl', perfil=perfil)
+	return template('perfil.tpl', perfil=perfil)
 
 @route('/')
 def index():
