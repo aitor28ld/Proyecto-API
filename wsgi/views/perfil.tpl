@@ -10,6 +10,7 @@
 						% if perfil["images"]!="":
 							<img src="{{perfil["images"][0]["url"]}}" height="230" width="290" /><br>
 						%end
+						%end
 						<p> {{perfil}}</p>
 						<a href="{{perfil["external_urls"]["spotify"]}}">Más información sobre tu perfil</a>
 					</section>
