@@ -47,15 +47,13 @@ def get_token():
 
 @get('/perfil')
 def personal():
-	token=request.get_cookie("token", secret='some-secret-key')
-	return token
-	#headers = {"Accept":"aplication/json","Authorization":token}
-	#if token_valido():
-		#token=request.get_cookie("token", secret=client_secret)
-		#oauth2 = OAuth2Session(client_id, token=token)
-		#perfil = requests.get("https://api.spotify.com/v1/me", headers=headers)
+	token = request.get_cookie("token", secret='some-secret-key')
+	tokens = token["token_type"]+token["access_token"]
+	return tokens
+	#headers = {"Accept":"aplication/json","Authorization":tokens}
+	#perfil = requests.get("https://api.spotify.com/v1/me", headers=headers)
 		
-		#return template('perfil.tpl', perfil=perfil)
+	#return template('perfil.tpl', perfil=perfil)
 
 @route('/')
 def index():
