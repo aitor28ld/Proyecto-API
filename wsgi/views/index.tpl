@@ -6,7 +6,7 @@
 					<section id="two">
 						<h2><a href="/login">Logueate</a></h2>
 						<br>
-						<h3> Manual de cómo saber buscar la búsqueda.</h3>
+						<h3> Manual de cómo saber hacer las búsquedas.</h3>
 						<p>Opciones indicadas en el menú desplegable</p>
 						<p>Artista: escribiendo el nombre del artista podemos encontrar un link que nos llevará a su perfil en
 						spotify.<br>
