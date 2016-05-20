@@ -88,13 +88,13 @@ def search():
 		
 		return template("albums.tpl", album=album)
 		
-	if opciones == "playlist":
-		token = request.get_cookie("token", secret='some-secret-key')
-		tokens = token["token_type"]+" "+token["access_token"]
-		headers = {"Accept":"aplication/json","Authorization":tokens}
+	#if opciones == "playlist":
+	#	token = request.get_cookie("token", secret='some-secret-key')
+	#	tokens = token["token_type"]+" "+token["access_token"]
+	#	headers = {"Accept":"aplication/json","Authorization":tokens}
 		
 		
-		return template('playlist.tpl', lista=)
+	#	return template('playlist.tpl', lista=)
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
