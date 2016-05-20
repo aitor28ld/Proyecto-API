@@ -4,7 +4,7 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h1>Bienvenido {{perfil["display_name"]}}</h1><br>
+						<h1>Bienvenido {{perfil["id"]}}</h1><br>
 						
 						<p> {{perfil}}</p>
 						<a href="{{perfil["external_urls"]["spotify"]}}">Más información sobre tu perfil</a>
