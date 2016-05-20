@@ -48,7 +48,7 @@ def get_token():
 @get('/perfil')
 def personal():
 	token = request.get_cookie("token", secret='some-secret-key')
-	tokens = token["token_type"]+token["access_token"]
+	tokens = token["token_type"]+" "+token["access_token"]
 	return tokens
 	#headers = {"Accept":"aplication/json","Authorization":tokens}
 	#perfil = requests.get("https://api.spotify.com/v1/me", headers=headers)
