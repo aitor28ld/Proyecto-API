@@ -61,9 +61,8 @@ def lista():
 	nombreid = request.forms.get('creador')
 	nombrepl = request.forms.get('name')
 	publica = request.forms.get('public')
-		
 	
-		return template('creador.tpl', listas=listas)
+	return template('creador.tpl')
 
 @post('/create')
 def playlist():
@@ -75,7 +74,7 @@ def playlist():
 	if lista.status_code == 200:
 		listas=lista.json()
 	
-	return template('creador.tpl', listas=listas)
+	return template('cr.tpl', listas=listas)
 	
 
 @route('/')
