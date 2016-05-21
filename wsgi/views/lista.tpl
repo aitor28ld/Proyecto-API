@@ -9,6 +9,7 @@
 						<input name="name" type="text">Introduce el nombre de la lista de reproducción</input><br>
 						<input name="public" type="text">¿Quieres que sea pública?(Escribe true(verdad) o false):</input><br>
 						<input value="Enviar" type="submit"/>
+						
 					</section>
 
 			</div>

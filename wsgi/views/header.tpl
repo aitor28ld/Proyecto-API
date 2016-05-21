@@ -28,7 +28,6 @@
 							<option value="album">Albums</option>
 							<option value="playlist">Lista de Reproducción</option>
 						</select><br>
-						<input value="Buscar" type="submit"/></p>
-				<br><a href="http://spotype-aitor28ld.rhcloud.com/lista">Crear una lista de reproducción</a>
+						<input value="Buscar" type="submit"/></p>				
 			</header>
 
