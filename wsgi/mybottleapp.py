@@ -56,6 +56,27 @@ def personal():
 		
 	return template('perfil.tpl', perfil=cuenta)
 
+@route('/lista',method='POST')
+def lista():
+	nombreid = request.forms.get('creador')
+	nombrepl = request.forms.get('name')
+	publica = request.forms.get('public')
+	
+	token = request.get_cookie("token", secret='some-secret-key')
+	tokens = token["token_type"]+" "+token["access_token"]
+	headers = {"Accept":"aplication/json","Authorization":tokens}
+	data = json.dumps({"name":nombrepl,"public":publica})
+	lista = requests.post("https://api.spotify.com/v1/users/"+nombreid+"/playlists",headers=headers,data=data)
+	if lista.status_code == 200:
+		listas=lista.json()
+	
+	return template('creador.tpl', listas=listas)
+
+#@post('/create')
+#def playlist():
+	#return template('creador.tpl')
+	
+
 @route('/')
 def index():
     return template('index.tpl')
@@ -94,6 +115,7 @@ def search():
 			playlist = lista.json()
 		
 		return template('playlist.tpl', playlist=playlist)
+
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
