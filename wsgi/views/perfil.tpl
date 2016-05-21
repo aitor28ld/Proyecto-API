@@ -7,7 +7,7 @@
 						<h1>Bienvenido {{perfil["id"]}}</h1><br>
 						<a href="{{perfil["external_urls"]["spotify"]}}">Más información sobre tu perfil</a><br>
 						<form action="lista" method="post">
-						<button type="submit">Crear una lista de reproducción</button>
+						<input type="submit">Crear una lista de reproducción</input>
 						</form>
 					</section>
 
