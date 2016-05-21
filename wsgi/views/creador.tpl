@@ -4,7 +4,7 @@
 
 				<!-- Two -->
 					<section id="two">
-					%for i in listas[]:
+					%for i in listas:
 					<h1>{{i["id"]}}</h1>
 					%end
 					</section>
