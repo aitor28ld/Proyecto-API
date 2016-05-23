@@ -68,8 +68,7 @@ def lista():
 	lista = requests.post("https://api.spotify.com/v1/users/"+str(nombreid)+"/playlists",headers=headers,data=data)
 	if lista.status_code == 200:
 		listas=lista.json()
-	
-	return template('creador.tpl', listas=listas)
+		return template('creador.tpl', listas=listas)
 
 #@post('/create')
 #def playlist():
