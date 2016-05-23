@@ -92,20 +92,21 @@ def search():
 		if artistas.status_code == 200:
 			artista=artistas.json()
 			artis=artista["artists"]["items"]
-			#for i in artista["artists"]["items"]:
-			#	nombre = i["name"]
-			#	url = i["external_urls"]["spotify"]
 		
 		return template('artistas.tpl', artis=artis)
 	if opciones == "track":
 		canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
 		identificador = request.get_cookie("owner id")
 		playl = request.get_cookie("playlist id")
-		if canciones.status_code == 200:
-			cancion = canciones.json()
 		if identificador != "" and playl != "":
+			if canciones.status_code == 200:
+				cancion = canciones.json()
+		
 			return template("canciones.tpl", canciones=cancion, identificador=identificador, playl=playl)
 		else:
+			if canciones.status_code == 200:
+				cancion = canciones.json()
+				
 			return template("canciones.tpl", canciones=cancion)
 	if opciones == "album":
 		albums = requests.get("https://api.spotify.com/v1/search", params=datos)
