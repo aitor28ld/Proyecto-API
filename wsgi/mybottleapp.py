@@ -74,7 +74,6 @@ def lista():
 		lis= lista.json()
 		listas=lis
 		
-		
 		return template('creador.tpl', listas=listas)
 
 #@post('/create')
