@@ -28,6 +28,7 @@
 							<option value="album">Albums</option>
 							<option value="playlist">Lista de Reproducción</option>
 						</select><br>
-						<input value="Buscar" type="submit"/></p>				
+						<input value="Buscar" type="submit"/>
+					</form></p>				
 			</header>
 
