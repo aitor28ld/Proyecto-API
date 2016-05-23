@@ -51,7 +51,7 @@ def personal():
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
 	perfil = requests.get("https://api.spotify.com/v1/me", headers=headers)
-	if perfil.status_code == 200:
+	if perfil.status_code == 201:
 		cuenta = perfil.json()
 		
 	return template('perfil.tpl', perfil=cuenta)
