@@ -71,7 +71,9 @@ def lista():
 	data = json.dumps({"name":nombrepl,"public":publica})
 	lista = requests.post("https://api.spotify.com/v1/users/"+str(nombreid)+"/playlists",headers=headers,data=data)
 	if lista.status_code != 200:
-		listas=lista
+		lis= lista.json()
+		listas=lis
+		
 		
 		return template('creador.tpl', listas=listas)
 
