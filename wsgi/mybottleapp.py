@@ -61,11 +61,6 @@ def lista():
 	nombreid = request.forms.get('creador')
 	nombrepl = request.forms.get('name')
 	publica = request.forms.get('public')
-	
-	return template('creador.tpl')
-
-@post('/create')
-def playlist():
 	token = request.get_cookie("token", secret='some-secret-key')
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
@@ -75,6 +70,18 @@ def playlist():
 		listas=lista.json()
 	
 	return template('creador.tpl', listas=listas)
+
+#@post('/create')
+#def playlist():
+#	token = request.get_cookie("token", secret='some-secret-key')
+#	tokens = token["token_type"]+" "+token["access_token"]
+#	headers = {"Accept":"aplication/json","Authorization":tokens}
+#	data = json.dumps({"name":nombrepl,"public":publica})
+#	lista = requests.post("https://api.spotify.com/v1/users/"+str(nombreid)+"/playlists",headers=headers,data=data)
+#	if lista.status_code == 200:
+#		listas=lista.json()
+	
+#	return template('creador.tpl', listas=listas)
 	
 
 @route('/')
