@@ -62,7 +62,7 @@ def formlista():
 
 @post('/lista')
 def lista():
-	nombreid = request.forms.get('creador')
+	nombreid = request.forms.get('id')
 	nombrepl = request.forms.get('name')
 	publica = request.forms.get('public')
 	token = request.get_cookie("token", secret='some-secret-key')
