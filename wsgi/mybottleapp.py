@@ -51,7 +51,7 @@ def personal():
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
 	perfil = requests.get("https://api.spotify.com/v1/me", headers=headers)
-	if perfil.status_code == 201:
+	if perfil.status_code == 200:
 		cuenta = perfil.json()
 		
 	return template('perfil.tpl', perfil=cuenta)
@@ -70,7 +70,7 @@ def lista():
 	headers = {"Accept":"aplication/json","Authorization":tokens}
 	data = json.dumps({"name":nombrepl,"public":publica})
 	lista = requests.post("https://api.spotify.com/v1/users/"+str(nombreid)+"/playlists",headers=headers,data=data)
-	if lista.status_code == 200:
+	if lista.status_code == 201:
 		listas=lista.json()
 		return template('creador.tpl', listas=listas)
 
