@@ -96,7 +96,7 @@ def search():
 		return template('artistas.tpl', artis=artis)
 	if opciones == "track":
 		canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
-		identificador = request.get_cookie("owner id")
+		identificador = request.get_cookie("id")
 		playl = request.get_cookie("playlist id")
 		if identificador != "" and playl != "":
 			if canciones.status_code == 200:
