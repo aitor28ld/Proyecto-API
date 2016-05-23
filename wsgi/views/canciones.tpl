@@ -5,7 +5,8 @@
 					<section id="two">
 						<a href="http://spotype-aitor28ld.rhcloud.com"> Volver atrás</a><br>
 						%for i in canciones["tracks"]["items"]:
-							<ul><p><a href="{{i["external_urls"]["spotify"]}}">{{i["name"]}}</a></p>
+							<ul><p><a href="{{i["external_urls"]["spotify"]}}">{{i["name"]}}</a>
+							<a href="http://spotype-aitor28ld.rhcloud.com/addtrack">Añadir canciones a una playlist</a></p>
 							<iframe src="https://embed.spotify.com/?uri={{i["uri"]}}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
 							</ul>
 						%end

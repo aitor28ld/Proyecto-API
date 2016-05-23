@@ -76,18 +76,7 @@ def lista():
 		
 		return template('creador.tpl', listas=listas)
 
-#@post('/create')
-#def playlist():
-#	token = request.get_cookie("token", secret='some-secret-key')
-#	tokens = token["token_type"]+" "+token["access_token"]
-#	headers = {"Accept":"aplication/json","Authorization":tokens}
-#	data = json.dumps({"name":nombrepl,"public":publica})
-#	lista = requests.post("https://api.spotify.com/v1/users/"+str(nombreid)+"/playlists",headers=headers,data=data)
-#	if lista.status_code == 200:
-#		listas=lista.json()
-	
-#	return template('creador.tpl', listas=listas)
-	
+
 
 @route('/')
 def index():
@@ -110,10 +99,14 @@ def search():
 		return template('artistas.tpl', artis=artis)
 	if opciones == "track":
 		canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
+		identificador = request.get_cookie("owner id")
+		playl = request.get_cookie("playlist id")
 		if canciones.status_code == 200:
 			cancion = canciones.json()
-		return template("canciones.tpl", canciones=cancion)
-	
+		if identificador != "" and playl != "":
+			return template("canciones.tpl", canciones=cancion, identificador=identificador, playl=playl)
+		else:
+			return template("canciones.tpl", canciones=cancion)
 	if opciones == "album":
 		albums = requests.get("https://api.spotify.com/v1/search", params=datos)
 		if albums.status_code == 200:
