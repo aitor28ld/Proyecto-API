@@ -9,7 +9,7 @@ import os
 client_id='d4be1938c2954285b3da4eb6ed81743c'
 client_secret='f0c4c13ea86a4d98812a56a1b57c876b'
 redirect_uri = 'http://spotype-aitor28ld.rhcloud.com/callback'
-scope = []
+scope = ['playlist-modify-public playlist-modify-private']
 token_url = "https://accounts.spotify.com/api/token"
 
 
