@@ -56,6 +56,10 @@ def personal():
 		
 	return template('perfil.tpl', perfil=cuenta)
 
+@get('/formlista')
+def formlista():
+	return template('lista.tpl')
+
 @post('/lista')
 def lista():
 	nombreid = request.forms.get('creador')
