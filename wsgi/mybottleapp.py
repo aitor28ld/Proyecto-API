@@ -74,7 +74,7 @@ def playlist():
 	if lista.status_code == 200:
 		listas=lista.json()
 	
-	return template('cr.tpl', listas=listas)
+	return template('creador.tpl', listas=listas)
 	
 
 @route('/')
