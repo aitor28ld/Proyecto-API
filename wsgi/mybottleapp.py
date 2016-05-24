@@ -82,8 +82,8 @@ def lista():
 def index():
     return template('index.tpl')
 
-@route('/search',method='POST')
-def search():
+@route('/search/<id>/<playlist>',method='POST')
+def search(name=nombreid,playlist=nombrepl):
 	buscador = request.forms.get('buscador')
 	opciones = request.forms.get('opciones')
 	datos={"q":buscador,"type":opciones}
