@@ -3,7 +3,6 @@
 
 				<!-- Two -->
 					<section id="two">
-						<a href="http://spotype-aitor28ld.rhcloud.com"> Volver atrás</a><br>
 						%for i in canciones["tracks"]["items"]:
 							<ul><p><a href="{{i["external_urls"]["spotify"]}}">{{i["name"]}}</a>
 							<form action="/addsong/{{i[uri]}}" method="post">

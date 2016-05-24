@@ -81,8 +81,8 @@ def tracks(name,playlist):
 	token = request.get_cookie("token", secret='some-secret-key')
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
-	addt = request.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(playlist)+"/tracks", headers=headers)
-	if addt.status_code == 200:
+	addt = requests.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(playlist)+"/tracks", headers=headers)
+	if addt.status_code == 201:
 		addtr = addt.json()
 	
 	return template('addtracks.tpl', addtracks=addtr)
