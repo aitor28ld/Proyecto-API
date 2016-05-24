@@ -76,13 +76,13 @@ def lista():
 		
 		return template('creador.tpl', listas=listas)
 
-@get('/addtracks/<name>/<playlist>')
+@post('/addtracks/<name>/<playlist>')
 def tracks(name,playlist):
 	name = name
 	playlist = playlist	
 	return template('addtracks.tpl',name = name,playlist = playlist)
 
-@get('/addsong/<track>')
+@post('/addsong/<track>')
 def song(track):
 	track = track
 	return template('addtracks.tpl', track = track)
