@@ -76,7 +76,22 @@ def lista():
 		
 		return template('creador.tpl', listas=listas)
 
+@post('/addtracks/<name>/<playlist>')
+def tracks(name,playlist):
+	token = request.get_cookie("token", secret='some-secret-key')
+	tokens = token["token_type"]+" "+token["access_token"]
+	headers = {"Accept":"aplication/json","Authorization":tokens}
+	addt = request.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(playlist)+"/tracks", headers=headers)
+	if addt.status_code == 200:
+		addtr = addt.json()
+	
+	return template('addtracks.tpl', addtracks=addtr)
 
+@post('/addsong/<track>')
+def song(track):
+	song=track
+
+	return template('songs.tpl'), song=song)
 
 @route('/')
 def index():
@@ -96,18 +111,10 @@ def search():
 		return template('artistas.tpl', artis=artis)
 	if opciones == "track":
 		canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
-		identificador = request.get_cookie("id")
-		playl = request.get_cookie("playlist id")
-		if identificador != "" and playl != "":
-			if canciones.status_code == 200:
-				cancion = canciones.json()
-		
-			return template("canciones.tpl", canciones=cancion, identificador=identificador, playl=playl)
-		else:
-			if canciones.status_code == 200:
-				cancion = canciones.json()
-				
-			return template("canciones.tpl", canciones=cancion)
+		if canciones.status_code == 200:
+			cancion = canciones.json()
+	
+		return template("canciones.tpl", canciones=cancion)
 	if opciones == "album":
 		albums = requests.get("https://api.spotify.com/v1/search", params=datos)
 		if albums.status_code == 200:
