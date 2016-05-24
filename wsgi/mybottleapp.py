@@ -77,22 +77,24 @@ def lista():
 		return template('creador.tpl', listas=listas)
 
 @get('/addtracks/<name>/<playlist>')
-def tracks(name,playlist):
+def tracks(name,playlist):	
+	return template('addtracks.tpl',name,playlist)
+
+@get('/addsong/<track>')
+def song(track):
+	return template('addtracks.tpl', track)
+
+@post('/playlist/<id>/<play>/<song>')
+def final(id,play,song):
 	token = request.get_cookie("token", secret='some-secret-key')
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
-	addt = requests.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(playlist)+"/tracks", headers=headers)
-	if addt.status_code == 201:
-		addtr = addt.json()
+	fin = requests.post("https://api.spotify.com/v1/users/"+str(id)+"/playlists/"+str/play)+"/tracks?uris="+song,headers=headers)
+	if fin.status_code == 201:
+		fin.json
 	
-	return template('addtracks.tpl', addtracks=addtr)
-
-@post('/addsong/<track>')
-def song(track):
-	song=track
-
-	return template('songs.tpl', song=song)
-
+	return template('final.tpl', final=fin)
+	
 @route('/')
 def index():
     return template('index.tpl')

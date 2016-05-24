@@ -4,7 +4,7 @@
 
 				<!-- Two -->
 					<section id="two">
-					<a href="https://spotype-aitor28ld.rhcloud.com/final/{{name}}/{{playlist}}/{{track}}">Último paso</a>
+					<h3>Canciones añadidas correctamente</h3>
 					</section>
 
 			</div>
