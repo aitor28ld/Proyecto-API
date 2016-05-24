@@ -76,7 +76,7 @@ def lista():
 		
 		return template('creador.tpl', listas=listas)
 
-@post('/addtracks/<name>/<playlist>')
+@get('/addtracks/<name>/<playlist>')
 def tracks(name,playlist):
 	token = request.get_cookie("token", secret='some-secret-key')
 	tokens = token["token_type"]+" "+token["access_token"]
