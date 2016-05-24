@@ -89,8 +89,8 @@ def plays(name,play):
 	return template('datos.tpl', name=name , play=play)
 	
 @post('/final/<id>/<play>')
-def final(name,play):
-	name = name
+def final(id,play):
+	name = id
 	play = play
 	uri = request.forms.get('uri')
 	token = request.get_cookie("token", secret='some-secret-key')
