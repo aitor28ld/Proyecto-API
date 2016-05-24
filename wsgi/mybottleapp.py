@@ -89,9 +89,9 @@ def final(id,play,song):
 	token = request.get_cookie("token", secret='some-secret-key')
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
-	fin = requests.post("https://api.spotify.com/v1/users/"+str(id)+"/playlists/"+str/play)+"/tracks?uris="+song,headers=headers)
+	fin = requests.post("https://api.spotify.com/v1/users/"+str(id)+"/playlists/"+str/play)+"/tracks?uris="+str(song), headers=headers)
 	if fin.status_code == 201:
-		fin.json
+		fin.json()
 	
 	return template('final.tpl', final=fin)
 	
