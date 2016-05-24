@@ -91,7 +91,7 @@ def tracks(name,playlist):
 def song(track):
 	song=track
 
-	return template('songs.tpl'), song=song)
+	return template('songs.tpl', song=song)
 
 @route('/')
 def index():
