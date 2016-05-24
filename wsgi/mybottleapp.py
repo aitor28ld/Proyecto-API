@@ -77,12 +77,15 @@ def lista():
 		return template('creador.tpl', listas=listas)
 
 @get('/addtracks/<name>/<playlist>')
-def tracks(name,playlist):	
-	return template('addtracks.tpl',name,playlist)
+def tracks(name,playlist):
+	name = name
+	playlist = playlist	
+	return template('addtracks.tpl',name = name,playlist = playlist)
 
 @get('/addsong/<track>')
 def song(track):
-	return template('addtracks.tpl', track)
+	track = track
+	return template('addtracks.tpl', track = track)
 
 @post('/playlist/<id>/<play>/<song>')
 def final(id,play,song):
