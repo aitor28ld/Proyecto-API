@@ -4,7 +4,7 @@
 
 				<!-- Two -->
 					<section id="two">
-					<h3>Canciones añadidas correctamente</h3>
+					<h3>Canciones agregadas correctamente</h3>
 					</section>
 
 			</div>

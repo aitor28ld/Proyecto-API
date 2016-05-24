@@ -80,19 +80,23 @@ def lista():
 def tracks(name,playlist):
 	name = name
 	playlist = playlist	
-	return template('canciones.tpl',name = name,playlist = playlist)
+	return template('addtracks.tpl',name = name,playlist = playlist)
 
-@post('/addsong/<track>')
-def song(track):
-	track = track
-	return template('addtracks.tpl', track = track)
-
-@post('/playlist/<id>/<play>/<song>')
-def final(id,play,song):
+@get('/playlist/<name>/<play>')
+def plays(name,play):
+	name=name
+	play=play 
+	return template('datos.tpl', name=name , play=play)
+	
+@post('/final/<id>/<play>')
+def final(name,play):
+	name = name
+	play = play
+	uri = request.forms.get('uri')
 	token = request.get_cookie("token", secret='some-secret-key')
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
-	fin = requests.post("https://api.spotify.com/v1/users/"+str(id)+"/playlists/"+str(play)+"/tracks?uris="+str(song), headers=headers)
+	fin = requests.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(play)+"/tracks?uris="+str(uri), headers=headers)
 	if fin.status_code == 201:
 		fin.json()
 	

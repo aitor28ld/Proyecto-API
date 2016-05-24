@@ -5,8 +5,8 @@
 				<!-- Two -->
 					<section id="two">
 					<a href="{{listas["external_urls"]["spotify"]}}">Más información</a><br>
-					<iframe src="https://embed.spotify.com/?uri={{listas["uri"]}}" width="240" height="290" frameborder="0" allowtransparency="true"></iframe>
-					<a href="http://spotype-aitor28ld.rhcloud.com/addtracks/{{listas["owner"]["id"]}}/{{listas["uri"].split(":")[4]}}">Empezar a añadir canciones</a>
+					<iframe src="https://embed.spotify.com/?uri={{listas["uri"]}}" width="240" height="290" frameborder="0" allowtransparency="true"></iframe><br>
+					<a href="https://spotype-aitor28ld.rhcloud.com/addtracks/{{lista["owner"]["id"]}}/{{lista["id"].split(":")[4]}}">Empezar a añadir</a>
 					</section>
 
 			</div>
