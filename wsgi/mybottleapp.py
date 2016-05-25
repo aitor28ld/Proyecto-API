@@ -66,6 +66,8 @@ def lista():
 	nombrepl = request.forms.get('name')
 	publica = request.forms.get('public')
 	token = request.get_cookie("token", secret='some-secret-key')
+	#Crear la cookie del id y de la playlist
+	#Cambiar y poner un checkbox al tipo de playlist
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
 	data = json.dumps({"name":nombrepl,"public":publica})
