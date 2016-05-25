@@ -1767,7 +1767,6 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="checkbox"],
 	select,
 	textarea {
 		-moz-appearance: none;
