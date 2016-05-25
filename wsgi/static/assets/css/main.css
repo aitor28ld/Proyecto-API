@@ -1853,7 +1853,7 @@
 		display: block;
 		float: left;
 		margin-right: -2em;
-		opacity: 0;
+		opacity: 100;
 		width: 1em;
 		z-index: -1;
 	}
