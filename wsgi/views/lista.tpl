@@ -3,7 +3,7 @@
 			<div id="main">
 
 				<!-- Two -->
-				<section id="two">
+				<section id="four">
 					<section>
 						<form action ="lista" method="post">
 							<input name="id" type="text">Introduce tu id (username)<br>
