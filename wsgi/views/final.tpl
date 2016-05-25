@@ -4,7 +4,7 @@
 
 				<!-- Two -->
 					<section id="two">
-					<h3>Canciones agregadas correctamente</h3>
+					<iframe src="https://embed.spotify.com/?uri={{final["uri"]}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 					</section>
 
 			</div>

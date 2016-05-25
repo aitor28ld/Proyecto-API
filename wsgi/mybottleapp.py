@@ -98,9 +98,11 @@ def final(id,playli):
 	headers = {"Accept":"aplication/json","Authorization":tokens}
 	fin = requests.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(pl)+"/tracks?uris="+str(uri), headers=headers)
 	if fin.status_code == 201:
-		fin.json()
+		f = requests.get("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(pl), headers=headers)
+		if f.status_code == 201:
+			fina = f.json()
 	
-	return template('final.tpl', final=fin)
+		return template('final.tpl', final=fina)
 	
 @route('/')
 def index():
