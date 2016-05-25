@@ -67,6 +67,8 @@ def lista():
 	publica = request.forms.get('public')
 	token = request.get_cookie("token", secret='some-secret-key')
 	#Crear la cookie del id y de la playlist
+	response.set_cookie("owner id", nombreid)
+	 
 	#Cambiar y poner un checkbox al tipo de playlist
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
@@ -74,6 +76,7 @@ def lista():
 	lista = requests.post("https://api.spotify.com/v1/users/"+str(nombreid)+"/playlists",headers=headers,data=data)
 	if lista.status_code != 200:
 		lis= lista.json()
+		response.set_cookie("playlist id",lis["uri"].split(":")[4])
 		listas=lis
 		
 		return template('creador.tpl', listas=listas)
@@ -124,6 +127,8 @@ def search():
 		return template('artistas.tpl', artis=artis)
 	if opciones == "track":
 		canciones = requests.get("https://api.spotify.com/v1/search", params=datos)
+		ownerid = request.get_cookie('owner id')
+		playlistid = request.get_cookie('playlist id')
 		if canciones.status_code == 200:
 			cancion = canciones.json()
 	
