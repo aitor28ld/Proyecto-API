@@ -99,7 +99,7 @@ def final(id,playli):
 	fin = requests.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(pl)+"/tracks?uris="+str(uri), headers=headers)
 	if fin.status_code == 201:
 		f = requests.get("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(pl), headers=headers)
-		if f.status_code == 201:
+		if f.status_code == 200:
 			fina = f.json()
 	
 		return template('final.tpl', final=fina)
