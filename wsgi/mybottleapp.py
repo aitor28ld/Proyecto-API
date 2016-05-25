@@ -88,15 +88,15 @@ def plays(name,play):
 	play=play 
 	return template('datos.tpl', name=name , play=play)
 	
-@post('/final/<id>/<play>')
-def final(id,play):
+@post('/final/<id>/<playli>')
+def final(id,playli):
 	name = id
-	play = play
+	pl = playli
 	uri = request.forms.get('uri')
 	token = request.get_cookie("token", secret='some-secret-key')
 	tokens = token["token_type"]+" "+token["access_token"]
 	headers = {"Accept":"aplication/json","Authorization":tokens}
-	fin = requests.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(play)+"/tracks?uris="+str(uri), headers=headers)
+	fin = requests.post("https://api.spotify.com/v1/users/"+str(name)+"/playlists/"+str(pl)+"/tracks?uris="+str(uri), headers=headers)
 	if fin.status_code == 201:
 		fin.json()
 	
