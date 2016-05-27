@@ -12,7 +12,7 @@
 									<label for="demo-priority-low">Lista de reproducción pública</label><br>
 								<input type="radio" id="demo-priority-low" name="public" value="false" />
 									<label for="demo-priority-low">Lista de reproducción privada</label><br>
-								<input value="Enviar" type="submit"/>
+								<input value="Enviar" type="submit" />
 							</div>
 						</div>
 					</form >
