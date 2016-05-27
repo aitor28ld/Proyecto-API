@@ -1572,17 +1572,20 @@
 		font-weight: 400;
 		line-height: 1.75em;
 	}
-	
-	form input[type="checkbox"],
-	form input[type="radio"] {
-		display: block;
+
+	body, input[type="checkbox"],
+	body, input[type="radio"] {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		display: none;
 		float: left;
 		margin-right: -2em;
 		opacity: 100;
 		width: 1em;
 		z-index: -1;
 	}
-
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
