@@ -10,10 +10,8 @@
 							<input name="name" type="text">Introduce el nombre de la lista de reproducción<br>
 							<div class="row uniform 50%">
 								<div class="4u 12u$(small)">
-									<label>
 										<input type="radio" name="public" value="true"  checked />Lista de reproducción pública<br>
 										<input type="radio" name="public" value="false" />Lista de reproducción privada<br>
-									</label>
 								</div>
 							</div>
 							<input value="Enviar" type="submit"/>
