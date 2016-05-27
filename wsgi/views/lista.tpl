@@ -17,6 +17,5 @@
 						</div>
 					</form >
 				</section>
-			
 			</div>
 % include('footer.tpl')

@@ -1565,14 +1565,13 @@
 			transition: none !important;
 		}
 
-	body, textarea {
+	body, input, select, textarea {
 		color: #a2a2a2;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
 		line-height: 1.75em;
 	}
-
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -1721,9 +1720,6 @@
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
-	header input {
-		color: #000000;
-	}
 
 	header h2 + p {
 		font-size: 1.25em;
@@ -1753,7 +1749,6 @@
 
 	form {
 		margin: 0 0 2em 0;
-		color:#000000;
 	}
 
 	label {
@@ -1853,7 +1848,7 @@
 		display: block;
 		float: left;
 		margin-right: -2em;
-		opacity: 100;
+		opacity: 0;
 		width: 1em;
 		z-index: -1;
 	}
