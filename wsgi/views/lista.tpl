@@ -14,8 +14,8 @@
 								</div>
 								<div class="row uniform 50%">
 									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-low" name="public" value="false" />
-										<label for="demo-priority-low">Lista de reproducción privada</label><br>
+										<input type="radio" id="demo-priority-normal" name="public" value="false" />
+										<label for="demo-priority-normal">Lista de reproducción privada</label><br>
 									</div>
 								</div>
 								<input value="Enviar" type="submit" />
