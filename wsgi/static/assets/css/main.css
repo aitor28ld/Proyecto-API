@@ -1573,19 +1573,6 @@
 		line-height: 1.75em;
 	}
 
-	body, form input[type="checkbox"],
-	body, form input[type="radio"] {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		display: none;
-		float: left;
-		margin-right: -2em;
-		opacity: 100;
-		width: 1em;
-		z-index: -1;
-	}
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -1863,7 +1850,7 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		display: none;
+		display: block;
 		float: left;
 		margin-right: -2em;
 		opacity: 100;
