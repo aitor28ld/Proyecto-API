@@ -1573,8 +1573,8 @@
 		line-height: 1.75em;
 	}
 
-	body, input[type="checkbox"],
-	body, input[type="radio"] {
+	body, form input[type="checkbox"],
+	body, form input[type="radio"] {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
