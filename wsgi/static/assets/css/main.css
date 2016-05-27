@@ -1572,6 +1572,20 @@
 		font-weight: 400;
 		line-height: 1.75em;
 	}
+	
+	input[type="checkbox"],
+	input[type="radio"] {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		display: block;
+		float: left;
+		margin-right: -2em;
+		opacity: 100;
+		width: 1em;
+		z-index: -1;
+	}
 
 
 	a {
@@ -1858,18 +1872,18 @@
 		z-index: -1;
 	}
 
-	input[type="checkbox"] + label,
-	input[type="radio"] + label {
-		text-decoration: none;
-		color: #a2a2a2;
-		cursor: pointer;
-		display: inline-block;
-		font-size: 1em;
-		font-weight: 400;
-		padding-left: 2.4em;
-		padding-right: 0.75em;
-		position: relative;
-	}
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			text-decoration: none;
+			color: #a2a2a2;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 1em;
+			font-weight: 400;
+			padding-left: 2.4em;
+			padding-right: 0.75em;
+			position: relative;
+		}
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
