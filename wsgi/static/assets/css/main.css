@@ -1860,7 +1860,7 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		display: block;
+		display: none;
 		float: left;
 		margin-right: -2em;
 		opacity: 100;
